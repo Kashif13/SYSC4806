@@ -1,0 +1,5 @@
+AddressBookTest.class
+BuddyInfoTest.class
+AddressBook\HttpRequestTest.class
+AddressBook\SmokeTest.class
+AddressBook\ApplicationTest.class

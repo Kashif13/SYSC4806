@@ -1,0 +1,15 @@
+AddressBook\AppContainerCustomizer.class
+AddressBook\BuddyRepository.class
+AddressBook\AddressBookRepository.class
+ui\button\DeleteButtonActionListener.class
+ui\button\ListTableActionListener.class
+AddressBook\AddressBookController.class
+AddressBook\BuddyInfo.class
+ui\MainFrame.class
+AddressBook\Launcher.class
+AddressBook\Application.class
+ui\ItemTableModel.class
+ui\BoxLayoutPanel.class
+ui\button\AddNewButtonActionListener.class
+ui\button\ActionListenerButton.class
+AddressBook\AddressBook.class
