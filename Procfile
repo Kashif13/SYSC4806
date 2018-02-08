@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Dserver.port=9000 -jar target/*.jar -Dspring.profiles.active=prod
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar target/AddressBook-1.0-SNAPSHOT.jar -Dspring.profiles.active=prod
