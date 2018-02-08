@@ -8,6 +8,8 @@ public class BuddyInfo {
     private String address;
     private String phoneNumber;
 
+    private String landLine;
+
     private Long id;
 
     private AddressBook addressBook;
@@ -34,6 +36,13 @@ public class BuddyInfo {
         this.phoneNumber = num;
     }
 
+    public BuddyInfo(String name, String addr, String num, String landLine){
+        this.name = name;
+        this.address = addr;
+        this.phoneNumber = num;
+        this.landLine = landLine;
+    }
+
 
 
     /***************GETTERS****************************/
@@ -55,6 +64,8 @@ public class BuddyInfo {
         return this.phoneNumber;
     }
 
+    public String getLandLine() { return this.landLine; }
+
     @ManyToOne
     public AddressBook getAddressBook() {
         return addressBook;
@@ -74,12 +85,14 @@ public class BuddyInfo {
         this.id = buddyID;
     }
 
+    public void setLandLine(String landLine) { this.landLine = landLine; }
+
     public void setAddressBook(AddressBook addressBook){
         this.addressBook = addressBook;
     }
 
     @Override
     public String toString(){
-        return "BuddyID: " +this.getId() + ", Name: " +this.name + ", Address: " + this.address + ", Phone Number: " + this.phoneNumber;
+        return "BuddyID: " +this.getId() + ", Name: " +this.name + ", Address: " + this.address + ", Phone Number: " + this.phoneNumber + ", Land Line: " + this.landLine;
     }
 }

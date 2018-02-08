@@ -23,8 +23,14 @@ public class ApplicationTest {
     private MockMvc mockMvc;
 
     @Test
-    public void shouldReturnDefaultMessage() throws Exception {
+    public void shouldReturnBuddies() throws Exception {
         this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("buddies")));
+    }
+
+    @Test
+    public void shouldReturnLandLine() throws Exception {
+        this.mockMvc.perform(get("/buddies")).andDo(print()).andExpect(status().isOk())
+                .andExpect(content().string(containsString("\"landLine\" : \"456\"")));
     }
 }

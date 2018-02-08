@@ -19,12 +19,12 @@ public class Application {
     public CommandLineRunner demo(BuddyRepository repository, AddressBookRepository addressBookRepository) {
         return (args) -> {
             // save a couple of buddys
-            repository.save(new BuddyInfo("1","2", "2"));
-            repository.save(new BuddyInfo("2","2", "2"));
-            repository.save(new BuddyInfo("3","2", "2"));
-            repository.save(new BuddyInfo("4","2", "2"));
-            repository.save(new BuddyInfo("5","2", "2"));
-            repository.save(new BuddyInfo("6","2", "2"));
+            repository.save(new BuddyInfo("Mike","23 St", "223", "456"));
+            repository.save(new BuddyInfo("David","2 St", "211", "4562"));
+            repository.save(new BuddyInfo("Chloe","9 St", "222", "789"));
+            repository.save(new BuddyInfo("4","2", "2", "7777"));
+            repository.save(new BuddyInfo("5","2", "2", "8888"));
+            repository.save(new BuddyInfo("6","2", "2", "9999"));
             addressBookRepository.save(new AddressBook());
 
             // fetch all customers
@@ -43,9 +43,9 @@ public class Application {
             log.info("");
 
             // fetch customers by last name
-            log.info("Buddy found with findByName('2'):");
+            log.info("Buddy found with findByName('Mike'):");
             log.info("--------------------------------------------");
-            for (BuddyInfo bauer : repository.findByName("2")) {
+            for (BuddyInfo bauer : repository.findByName("Mike")) {
                 log.info(bauer.toString());
             }
             log.info("");
