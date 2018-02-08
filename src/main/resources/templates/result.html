@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="'Buddy Created!'" />
+<p th:text="'content: ' + ${buddy.name}" />
+<p th:text="'content: ' + ${buddy.address}" />
+<p th:text="'content: ' + ${buddy.phoneNumber}" />
+<a href="/newBook">Create another buddy</a>
+
+</body>
+
+</html>
