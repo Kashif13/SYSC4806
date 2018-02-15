@@ -15,22 +15,27 @@ public class AddressBookController {
         return "newBook";
     }
 
-    @RequestMapping(value = "/newBuddy", method = RequestMethod.GET)
-    public String newBuddy(Model model){
+    @GetMapping("/newBuddy")
+    public String buddyForm(Model model){
         BuddyInfo buddy = new BuddyInfo();
         model.addAttribute("buddy", buddy);
         //model.addAttribute("book", book);
-        return "newBuddy";
+        return "buddy";
     }
 
-   @RequestMapping(value = "/newBuddy", method=RequestMethod.POST)
+    @PostMapping("/newBuddy")
+    public String buddySubmit(@ModelAttribute BuddyInfo buddy) {
+        return "result";
+    }
+
+   /*@RequestMapping(value = "/newBuddy", method=RequestMethod.POST)
     public String createBuddy(@ModelAttribute BuddyInfo buddy){
         return "result";
    }
 //    @RequestMapping(value = "/result", method=RequestMethod.POST)
 //    public String addBuddy(@ModelAttribute BuddyInfo buddy){
 //        return "result";
-//    }
+//    }*/
 
 
 }
