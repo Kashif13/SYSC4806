@@ -5,13 +5,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<p th:text="'Buddy Created!'" />
-<p th:text="'content: ' + ${buddy.name}" />
-<p th:text="'content: ' + ${buddy.address}" />
-<p th:text="'content: ' + ${buddy.phoneNumber}" />
-<p th:text="'content: ' + ${buddy.landLine}" />
-<a href="/newBook">Create another buddy</a>
-
+    <div id="buddyInfo">
+        <p th:text="'Buddy Created!'" />
+        <p th:text="'Name: ' + ${buddy.name}" />
+        <p th:text="'Address: ' + ${buddy.address}" />
+        <p th:text="'Phone Number: ' + ${buddy.phoneNumber}" />
+        <p th:text="'Land Line: ' + ${buddy.landLine}" />
+        <a href="/buddy">Create another buddy</a>
+    </div>
 </body>
 
 </html>

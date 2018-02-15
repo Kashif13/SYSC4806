@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/submitBuddy.js"></script>
+
+</head>
+<body>
+<form  id="buddyForm"  action="#" th:action="@{/buddy}" th:object="${buddy}" method="post">
+    <p>Name: <input id="name" type="text" th:field="*{name}" /></p>
+    <p>Address: <input id="address" type="text" th:field="*{address}" /></p>
+    <p>Phone Number: <input id="phoneNumber" type="text" th:field="*{phoneNumber}" /></p>
+    <p>Land Line: <input id="landLine" type="text" th:field="*{landLine}" /></p>
+    <p><input id="submit" type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+
+</form>
+<div id="success"></div>
+</body>
+
+</html>
