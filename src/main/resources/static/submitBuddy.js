@@ -24,7 +24,7 @@ function searchAjax() {
         timeout : 100000,
         success : function(data) {
             console.log("SUCCESS: ", data);
-            $("success").append("SUCCESS buddy added");
+            $("#success").append("SUCCESS buddy ", JSON.stringify(data.name), " added   ");
         },
         error : function(e) {
             console.log("ERROR: ", e);
